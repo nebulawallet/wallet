@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nebula Wallet — Your portfolio, on your desktop</title>
+  <meta name="description" content="Nebula Wallet is a desktop crypto wallet for Windows that runs locally on your machine. Live prices, portfolio charts and a clean, private interface. Invite-only early access.">
+  <meta name="theme-color" content="#0c0e27">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="nebula" aria-hidden="true">
+    <span class="cloud c1"></span>
+    <span class="cloud c2"></span>
+    <span class="cloud c3"></span>
+  </div>
+
+  <header class="nav" id="top">
+    <div class="wrap nav-inner">
+      <a href="#top" class="brand" aria-label="Nebula Wallet home">
+        <img src="assets/logo.png" alt="" width="36" height="36">
+        <span>Nebula <b>Wallet</b></span>
+      </a>
+      <nav class="links" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#local">How it works</a>
+        <a href="#coins">Coins</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <button type="button" class="btn btn-sm btn-primary" data-download>Download</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot"></span> Invite-only early access · v0.1</p>
+          <h1>Your crypto.<br><span class="grad">Your desktop.</span></h1>
+          <p class="lead">Nebula Wallet is a desktop crypto wallet that runs locally on your machine. No account, no sign-up, no cloud — just a fast, beautiful view of your portfolio with live market prices.</p>
+          <div class="cta-row">
+            <button type="button" class="btn btn-primary" data-download>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Download for Windows
+            </button>
+            <a href="#local" class="btn btn-ghost">See how it works</a>
+          </div>
+          <ul class="trust">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>No account</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Data stays on your PC</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Live prices</li>
+          </ul>
+        </div>
+
+        <!-- App mockup -->
+        <div class="mock-wrap" aria-hidden="true">
+          <div class="orbit o1"></div>
+          <div class="orbit o2"></div>
+          <div class="mock">
+            <aside class="mock-side">
+              <img src="assets/logo.png" alt="">
+              <i class="on"></i><i></i><i></i>
+              <i class="last"></i>
+            </aside>
+            <div class="mock-main">
+              <div class="mock-top">
+                <p class="mock-label">Total balance</p>
+                <p class="mock-total">$251,384.90</p>
+                <p class="mock-change up">▲ 2.41% · 24h</p>
+              </div>
+              <svg class="spark" viewBox="0 0 300 70" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="sp-fill" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#9b7bff" stop-opacity=".45"/>
+                    <stop offset="100%" stop-color="#9b7bff" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="sp-line" x1="0" x2="1">
+                    <stop offset="0%" stop-color="#b38cff"/>
+                    <stop offset="100%" stop-color="#3fd2ff"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0 52 C30 48 40 30 70 36 S110 58 140 40 S190 14 220 24 S270 10 300 6 L300 70 L0 70Z" fill="url(#sp-fill)"/>
+                <path d="M0 52 C30 48 40 30 70 36 S110 58 140 40 S190 14 220 24 S270 10 300 6" fill="none" stroke="url(#sp-line)" stroke-width="2.5"/>
+              </svg>
+              <ul class="assets">
+                <li><span class="coin" style="--c:#F7931A">₿</span><div><b>Bitcoin</b><small>BTC</small></div><strong>$168,420.00</strong></li>
+                <li><span class="coin" style="--c:#7B93F5">Ξ</span><div><b>Ethereum</b><small>ETH</small></div><strong>$52,610.00</strong></li>
+                <li><span class="coin" style="--c:#B26BFF">◎</span><div><b>Solana</b><small>SOL</small></div><strong>$18,940.00</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRIP -->
+    <section class="strip" aria-label="Highlights">
+      <div class="wrap strip-inner">
+        <div><b>0</b><span>accounts to create</span></div>
+        <div><b>10</b><span>popular coins supported</span></div>
+        <div><b>60s</b><span>live price refresh</span></div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Features</p>
+          <h2>Everything at a glance.<br><span class="grad">Nothing in the cloud.</span></h2>
+          <p>A focused desktop app built around one idea: your portfolio is your business, so it should live on your machine.</p>
+        </header>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+            <h3>Runs locally</h3>
+            <p>A native Windows desktop app. Your wallet data is stored on your own computer, not on someone else's server.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 17l5-6 4 4 8-9"/><path d="M14 6h6v6"/></svg></div>
+            <h3>Live market prices</h3>
+            <p>Prices, 24h change and 7-day charts refresh every minute — and fall back gracefully when you're offline.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/></svg></div>
+            <h3>Portfolio insights</h3>
+            <p>Portfolio chart and allocation donut show where your value sits and how it moves over time.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M7 7h11l-3-3M17 17H6l3 3"/></svg></div>
+            <h3>Send, receive & exchange</h3>
+            <p>Per-asset wallets with send and receive flows, QR codes, and a built-in exchange screen.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><path d="M3 21 21 3"/></svg></div>
+            <h3>Privacy mode</h3>
+            <p>Hide every balance with one click — handy when you're sharing your screen or working in public.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+            <h3>Installer or portable</h3>
+            <p>Install it like any app, or grab the portable .exe and run it straight from a folder or USB stick.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="local" class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">How it works</p>
+          <h2>Up and running in <span class="grad">a minute.</span></h2>
+        </header>
+        <ol class="steps">
+          <li class="reveal">
+            <span class="step-n">01</span>
+            <h3>Get your invite</h3>
+            <p>Nebula is in invite-only early access. Enter your invite code to unlock the download.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-n">02</span>
+            <h3>Install or run portable</h3>
+            <p>Run the Windows installer, or launch the portable version — no admin setup needed.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-n">03</span>
+            <h3>Open and explore</h3>
+            <p>No email, no login. Nebula opens straight to your portfolio with live prices.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- COINS -->
+    <section id="coins" class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Supported coins</p>
+          <h2>The coins you <span class="grad">actually hold.</span></h2>
+        </header>
+        <ul class="coin-grid reveal">
+          <li><span class="coin" style="--c:#F7931A">₿</span>Bitcoin <small>BTC</small></li>
+          <li><span class="coin" style="--c:#7B93F5">Ξ</span>Ethereum <small>ETH</small></li>
+          <li><span class="coin" style="--c:#B26BFF">◎</span>Solana <small>SOL</small></li>
+          <li><span class="coin" style="--c:#26A17B">₮</span>Tether <small>USDT</small></li>
+          <li><span class="coin" style="--c:#F3BA2F">B</span>BNB <small>BNB</small></li>
+          <li><span class="coin" style="--c:#9AA9BC">✕</span>XRP <small>XRP</small></li>
+          <li><span class="coin" style="--c:#3C7BEA">₳</span>Cardano <small>ADA</small></li>
+          <li><span class="coin" style="--c:#D4B44A">Ð</span>Dogecoin <small>DOGE</small></li>
+          <li><span class="coin" style="--c:#BFC4CC">Ł</span>Litecoin <small>LTC</small></li>
+          <li><span class="coin" style="--c:#E84142">A</span>Avalanche <small>AVAX</small></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD -->
+    <section id="download" class="section">
+      <div class="wrap">
+        <div class="download reveal">
+          <img src="assets/logo.png" alt="" width="88" height="88" class="dl-logo">
+          <h2>Ready to <span class="grad">launch?</span></h2>
+          <p>Nebula Wallet v0.1 for Windows · invite-only early access</p>
+          <button type="button" class="btn btn-primary btn-lg" data-download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5 10 4.5v7H3zM11 4.3 21 3v8.5H11zM3 12.5h7v7l-7-1zM11 12.5h10V21l-10-1.4z" fill="currentColor"/></svg>
+            Download for Windows
+          </button>
+          <p class="fine">Got no invite yet? Ask whoever told you about Nebula.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="wrap narrow">
+        <header class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Questions, <span class="grad">answered.</span></h2>
+        </header>
+        <div class="faq">
+          <details>
+            <summary>What does "runs locally" mean?</summary>
+            <p>Nebula is a desktop app. Your wallet data and settings are stored on your own computer. The only thing it fetches from the internet is public market price data.</p>
+          </details>
+          <details>
+            <summary>Why do I need an invite code?</summary>
+            <p>Nebula is in early access, so we're keeping the group small while we polish things. If someone shared a code with you, you're in.</p>
+          </details>
+          <details>
+            <summary>Do I need an account?</summary>
+            <p>No. There's no sign-up, email or login. Just install and open.</p>
+          </details>
+          <details>
+            <summary>Which operating systems are supported?</summary>
+            <p>Windows for now, as an installer or a portable .exe.</p>
+          </details>
+          <details>
+            <summary>Windows says the app is unrecognized. Is that normal?</summary>
+            <p>Early builds aren't code-signed yet, so Windows SmartScreen may show a warning. Only download Nebula from this site.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a href="#top" class="brand small">
+        <img src="assets/logo.png" alt="" width="28" height="28">
+        <span>Nebula <b>Wallet</b></span>
+      </a>
+      <p>© <span id="year">2026</span> Nebula Wallet</p>
+      <nav aria-label="Footer">
+        <a href="#features">Features</a>
+        <a href="#coins">Coins</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Invite-code gate -->
+  <dialog id="invite" class="modal" aria-labelledby="invite-title">
+    <button type="button" class="modal-x" data-close aria-label="Close">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+
+    <div class="step-code">
+      <img src="assets/logo.png" alt="" width="64" height="64" class="modal-logo">
+      <h2 id="invite-title">Enter your invite code</h2>
+      <p class="modal-sub">Nebula Wallet is invite-only during early access.</p>
+      <form id="invite-form" novalidate>
+        <label for="code" class="sr-only">Invite code</label>
+        <input id="code" name="code" type="text" placeholder="NEBULA-XXXX-XXXX" autocomplete="off" autocapitalize="characters" spellcheck="false" required>
+        <p class="err" id="code-err" role="alert"></p>
+        <button type="submit" class="btn btn-primary btn-block">Unlock download</button>
+      </form>
+    </div>
+
+    <div class="step-dl" hidden>
+      <div class="ok-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4 10-10" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h2>You're in.</h2>
+      <p class="modal-sub">Choose your download — Nebula Wallet v0.1 for Windows.</p>
+      <div class="dl-options">
+        <a class="dl-opt" id="dl-setup" download>
+          <span><b>Installer</b><small>Recommended · adds Start menu & desktop shortcut</small></span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="dl-opt" id="dl-portable" download>
+          <span><b>Portable</b><small>No install · run from any folder</small></span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <p class="modal-note">Nebula Wallet v0.1 for Windows · your keys stay on your machine.</p>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
